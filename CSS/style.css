@@ -149,6 +149,7 @@ select.pregunta{
     grid-template-rows: 60vh auto 20vh auto;
     margin: 0px;
     padding: 0px;
+    width: 100%;
 }
 
 input[name="mater"]::placeholder{
