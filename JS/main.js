@@ -138,9 +138,10 @@ function addAlumno(){
     add_div.data.reset();
     lista_materias_n = [];
     add_materia();
-
+/*
     let hj = JSON.stringify(lista_alumnos);
     localStorage.setItem("list", hj);
+*/
 }
 
 var alums = [];
@@ -281,11 +282,11 @@ function cerrar_vista(actor){
 
 add_materia();
 
-
+/*
 if(localStorage.getItem("list")){
     lista_alumnos = (JSON.parse(localStorage.getItem("list")));
 }
-
+*/
 
 function calc_proms(){
     let promG = document.getElementById("prom");
