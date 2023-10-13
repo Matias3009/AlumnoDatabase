@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATABASE</title>
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <h1>
+    </h1>
+    <div id="vista1">
+        <form id="data_alumno">
+            <h2>
+                Añadir Alumno
+            </h2>
+            <label for="nombre_alumno">Nombre: </label><input type="text" id="nombre_alumno" class="pregunta"><br>
+            <label for="apellidos_alumno">Apellidos: </label><input type="text" id="apellidos_alumno" class="pregunta"><br>
+
+            <label for="edad">Edad: </label>
+            <button type="button" onclick="document.getElementById('edad').stepDown()" class="boton_cambio"><</button>
+            <input type="number" id="edad" class="pregunta" min="0" max="120" value="5">
+            <button type="button" onclick="document.getElementById('edad').stepUp()" class="boton_cambio">></button>
+            <br>
+
+            <label for="grupo">Grupo: </label>
+            <select id="grupo" class="pregunta">
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+            </select>
+        </form>
+        <div id="add_alumno">
+            
+        </div>
+            
+        <div id="send_alumno">
+        
+            <div id="button_add" class="botonIm" onclick="add_materia()" style="grid-column: 1;">
+                Añadir Materia
+            </div>
+        
+            <div id="button_add" class="botonIm" onclick="vista_alumnos(this)" style="grid-column: 2; justify-self: end;">
+                Ver Estudiantes &#x25BC;
+            </div>
+            <div id="button_add" class="botonIm" onclick="addAlumno()" style="grid-column: 3; justify-self: end;">
+                Añadir Alumno
+            </div>
+        </div>
+        <div id="lista">
+            <div id="searcher" >
+                <h2>Busqueda: </h2><br>
+                <label for="s_by_name">Por Nombre: </label>
+                <input type="text" name="byname" id="s_by_name">
+                <button onclick="search_name()">Buscar</button>
+                <br><br>
+                <label for="s_by_surname">Por Apellido: </label>
+                <input type="text" name="bysurname" id="s_by_surname">
+                <button onclick="search_surn()">Buscar</button>
+                <br><br>
+                <label for="orden">Ordenar por: </label>
+                <select id="orden" name="ordenar">
+                    <option value="1" selected>Edad Ascendente</option>
+                    <option value="2" selected>Edad Descendente</option>
+                    <option value="3" selected>Promedio Descen.</option>
+                </select>
+                <button onclick="ordenar()">Aplicar</button>
+
+            </div>
+            <div id="alumns">
+
+            </div>
+            <div id="datass">
+                <label for="">Promedio de edad total: </label><label id="prom"></label><br>
+                <label for="">Promedio de edad Grupo A: </label><label id="promA"></label><br>
+                <label for="">Promedio de edad Grupo B: </label><label id="promB"></label><br>
+                <label for="">Promedio de edad Grupo C: </label><label id="promC"></label><br>
+            </div>
+        </div>
+    </div>
+
+    <script src="/JS/main.js"></script>
+</body>
+</html>
