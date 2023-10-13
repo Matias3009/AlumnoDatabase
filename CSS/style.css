@@ -1,18 +1,10 @@
-@font-face {
-    font-family: fuenteNeon;
-    src: url(/../Assets/NEONLEDLight.otf);
-}
+
 
 body {
     background-color: #d9ded4;
     font-family: 'Young Serif', serif;
 }
 
-h1{
-    font-family: fuenteNeon;
-    color: rgba(0, 255, 255, 0.767);
-    font-size: 22px;
-}
 #data_alumno{
     background-color: rgb(104, 122, 83);
     grid-column: 1;
